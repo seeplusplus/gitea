@@ -84,6 +84,13 @@
 						<input name="keep_activity_private" type="checkbox" {{if .SignedUser.KeepActivityPrivate}}checked{{end}}>
 					</div>
 				</div>
+				
+				<div class="field">
+					<div class="ui checkbox" id="show-private-activity">
+						<label data-tooltip-content="{{ctx.Locale.Tr "settings.show_private_activity_popup"}}"><strong>{{ctx.Locale.Tr "settings.show_private_activity"}}</strong></label>
+						<input name="show_private_activity" type="checkbox" {{if .SignedUser.ShowPrivateActivity}}checked{{end}}>
+					</div>
+				</div>
 
 				<div class="divider"></div>
 

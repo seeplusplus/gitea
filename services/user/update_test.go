@@ -41,6 +41,7 @@ func TestUpdateUser(t *testing.T) {
 		IsAdmin:                      optional.Some(true),
 		Visibility:                   optional.Some(structs.VisibleTypePrivate),
 		KeepActivityPrivate:          optional.Some(true),
+		ShowPrivateActivity:          optional.Some(true),
 		Language:                     optional.Some("lang"),
 		Theme:                        optional.Some("theme"),
 		DiffViewStyle:                optional.Some("split"),
@@ -63,6 +64,7 @@ func TestUpdateUser(t *testing.T) {
 	assert.Equal(t, opts.IsAdmin.Value(), user.IsAdmin)
 	assert.Equal(t, opts.Visibility.Value(), user.Visibility)
 	assert.Equal(t, opts.KeepActivityPrivate.Value(), user.KeepActivityPrivate)
+	assert.Equal(t, opts.ShowPrivateActivity.Value(), user.ShowPrivateActivity)
 	assert.Equal(t, opts.Language.Value(), user.Language)
 	assert.Equal(t, opts.Theme.Value(), user.Theme)
 	assert.Equal(t, opts.DiffViewStyle.Value(), user.DiffViewStyle)
@@ -83,6 +85,7 @@ func TestUpdateUser(t *testing.T) {
 	assert.Equal(t, opts.IsAdmin.Value(), user.IsAdmin)
 	assert.Equal(t, opts.Visibility.Value(), user.Visibility)
 	assert.Equal(t, opts.KeepActivityPrivate.Value(), user.KeepActivityPrivate)
+	assert.Equal(t, opts.ShowPrivateActivity.Value(), user.ShowPrivateActivity)
 	assert.Equal(t, opts.Language.Value(), user.Language)
 	assert.Equal(t, opts.Theme.Value(), user.Theme)
 	assert.Equal(t, opts.DiffViewStyle.Value(), user.DiffViewStyle)

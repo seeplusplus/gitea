@@ -148,6 +148,8 @@ type User struct {
 	DiffViewStyle       string `xorm:"NOT NULL DEFAULT ''"`
 	Theme               string `xorm:"NOT NULL DEFAULT ''"`
 	KeepActivityPrivate bool   `xorm:"NOT NULL DEFAULT false"`
+	// show activity from private repos
+	ShowPrivateActivity bool `xorm:"NOT NULL DEFAULT false"`
 }
 
 func init() {

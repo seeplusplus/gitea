@@ -599,6 +599,8 @@ var migrations = []Migration{
 	NewMigration("Add index to action_task stopped log_expired", v1_23.AddIndexToActionTaskStoppedLogExpired),
 	// v303 -> v304
 	NewMigration("Add metadata column for comment table", v1_23.AddCommentMetaDataColumn),
+	// v304 -> v305
+	NewMigration("Add ShowPrivateActivity to User table", v1_23.AddShowPrivateActivityUserColumn),
 }
 
 // GetCurrentDBVersion returns the current db version
